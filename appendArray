@@ -1,28 +1,20 @@
 import java.util.Arrays;
 public class AddingElement {
     public static void main(String[] args) {
-    
     int[] valueArray = {4,11,55,99};
-    
     int newItem = 99;
-   
     valueArray = arrayAppend(valueArray,newItem);
-   
-    System.out.println("\nArray with " + newItem
+     System.out.println("\nArray with " + newItem
         + " added:\n"
         + Arrays.toString(valueArray));
 }
 private static int[] arrayAppend(int[] arrayAppend, int newItem){
-    // length of old array
     int oldLength = arrayAppend.length;
-    // declare a new array of length 1+ from the old array (arrayAppend)
     int[] newArray = new int[oldLength + 1];
-    // length of new array
     int newLength = newArray.length;
     for (int i = 0; i < oldLength; i++)
         newArray[i] = arrayAppend[i];    
     newArray[oldLength] = newItem;       
-    // returning the new array with appended value
     return newArray;
  }
 }
